@@ -4,6 +4,7 @@ public class Player {
     public Card[] hand;
     public int numPlayer;
     public int numCards;
+    int cardSum;
 
     public Player(int pnumPlayer, boolean pisDealer){
         numPlayer = pnumPlayer;
@@ -24,6 +25,10 @@ public class Player {
     }
 
     public void cardSum(){
-
+        cardSum=0;
+        for(int i=0; i<hand.length; i++){
+            cardSum=cardSum+hand[i].value;
+        }
+        System.out.println("You are at " + cardSum);
     }
 }

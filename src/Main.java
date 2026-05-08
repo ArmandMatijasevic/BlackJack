@@ -4,6 +4,8 @@ public class Main {
     public Card [] deck;
 
     public Main(){
+        Player player = new Player(1, false);
+        Player dealer = new Player(0, true);
         deck = new Card [52];
         for(int i=0; i < deck.length; i++){
             if (i<13) {
@@ -21,6 +23,11 @@ public class Main {
         }
         shuffle();
         printDeck();
+        player.cardSum();
+        player.printHand();
+        dealer.cardSum();
+        dealer.printHand();
+
     }
 
     public static void main(String[] args) {
@@ -42,7 +49,6 @@ public class Main {
             Card cardholder = deck[randnum];
             deck[randnum]= deck[i];
             deck[i]=cardholder;
-
         }
     }
 }
