@@ -14,7 +14,7 @@ public class Player {
     }
 
     public void printHand(){
-        for(int i=0; i<hand.length; i++){
+        for(int i=0; i<numCards; i++){
             hand[i].printCard();
         }
     }
@@ -26,9 +26,9 @@ public class Player {
 
     public void cardSum(){
         cardSum=0;
-        for(int i=0; i<hand.length; i++){
+        for(int i=0; i<numCards; i++){
             cardSum=cardSum+hand[i].value;
         }
-        System.out.println("You are at " + cardSum);
+        System.out.println("PLayer "+numPlayer + " is at " + cardSum);
     }
 }

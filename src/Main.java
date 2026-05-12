@@ -1,11 +1,13 @@
-
+import java.util.Scanner;
 public class Main {
 
     public Card [] deck;
 
     public Main(){
         Player player = new Player(1, false);
-        Player dealer = new Player(0, true);
+        Player dealer = new Player(2, true);
+        Scanner sc=new Scanner(System.in);
+        String input = sc.nextLine();
         deck = new Card [52];
         for(int i=0; i < deck.length; i++){
             if (i<13) {
@@ -23,6 +25,9 @@ public class Main {
         }
         shuffle();
         printDeck();
+        for (int q=0; q<2; q++){
+            player.addCard(deck[q]);
+        }
         player.cardSum();
         player.printHand();
         dealer.cardSum();
@@ -37,7 +42,7 @@ public class Main {
     }
 
     public void printDeck(){
-        System.out.println("This deck: ");
+
         for (int i=0; i < deck.length; i++){
             deck[i].printCard();
 
@@ -51,5 +56,6 @@ public class Main {
             deck[i]=cardholder;
         }
     }
+
 }
 
