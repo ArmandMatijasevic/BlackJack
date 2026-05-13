@@ -13,23 +13,26 @@ public class Card {
     public String printCard() {
         String whichCard;
         if (value == 0) {
-            //System.out.println("Ace of " + suit);
+            System.out.println("Ace of " + suit);
             whichCard = ("Ace of " + suit);
         } else if (value == 10) {
-           // System.out.println("Jack of " + suit);
+           System.out.println("Jack of " + suit);
             whichCard = ("Jack of " + suit);
         } else if (value == 11) {
-          //  System.out.println("Queen of " + suit);
+            System.out.println("Queen of " + suit);
             whichCard = ("Queen of " + suit);
         } else if (value == 12) {
-          //  System.out.println("King of " + suit);
+            System.out.println("King of " + suit);
             whichCard = ("King of " + suit);
-        } else {
-          //  System.out.println((value + 1) + " of " + suit);
+        }
+        else {
+            System.out.println((value + 1) + " of " + suit);
             whichCard = ((value + 1) + " of " + suit);
         }
 
         return whichCard;
     }
+
+
 }
 

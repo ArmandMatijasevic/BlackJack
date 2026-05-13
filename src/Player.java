@@ -29,6 +29,7 @@ public class Player {
         for(int i=0; i<numCards; i++){
             cardSum=cardSum+hand[i].value;
         }
-        System.out.println("PLayer "+numPlayer + " is at " + cardSum);
+        System.out.println("Player " + numPlayer + " is at " + cardSum + " with the cards ");
+
     }
 }

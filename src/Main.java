@@ -6,8 +6,8 @@ public class Main {
     public Main(){
         Player player = new Player(1, false);
         Player dealer = new Player(2, true);
-        Scanner sc=new Scanner(System.in);
-        String input = sc.nextLine();
+
+
         deck = new Card [52];
         for(int i=0; i < deck.length; i++){
             if (i<13) {
@@ -22,7 +22,9 @@ public class Main {
             else if (i<52) {
                 deck[i] = new Card(i%13, "Clubs", false);
             }
+
         }
+
         shuffle();
         printDeck();
         for (int q=0; q<2; q++){
@@ -32,12 +34,20 @@ public class Main {
         player.printHand();
         dealer.cardSum();
         dealer.printHand();
+        Scanner sc=new Scanner(System.in);
+        String input = sc.nextLine();
+        if (input.equals("h")){
+            System.out.println("Player " + player.numPlayer+ " hits");
+        }
+        if (input.equals("s")){
+            System.out.println("Player " + player.numPlayer+ " stays");
+        }
 
     }
 
     public static void main(String[] args) {
         Main blackjack = new Main();
-        Card myapp = new Card(0, "spades",true);
+        Card myapp = new Card(3, "spades",true);
 
     }
 
