@@ -2,6 +2,7 @@ import java.util.Scanner;
 public class Main {
 
     public Card [] deck;
+    public int cardNumber;
 
     public Main(){
         Player player = new Player(1, false);
@@ -28,7 +29,8 @@ public class Main {
         shuffle();
         printDeck();
         for (int q=0; q<2; q++){
-            player.addCard(deck[q]);
+            player.addCard(deck[cardNumber]);
+            cardNumber+=1;
         }
         player.cardSum();
         player.printHand();
