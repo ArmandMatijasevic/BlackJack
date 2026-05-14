@@ -3,11 +3,17 @@ public class Card {
     public int value;
     public String suit;
     public boolean isUp;
+    public int gamevalue;
 
     public Card(int pvalue, String psuit, boolean pisUp) {
         value = pvalue;
         suit = psuit;
         isUp = pisUp;
+        gamevalue=value +1;
+        if(value>9){
+            gamevalue=10;
+        }
+
     }
 
     public String printCard() {
